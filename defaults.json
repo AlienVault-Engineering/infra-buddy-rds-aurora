@@ -3,10 +3,5 @@
     "type": "property",
     "key": "DB_INSTANCE_TYPE",
     "default": "db.t2.medium"
-  },
-  "DOMAIN": {
-    "type": "property",
-    "key": "DEFAULT_DOMAIN",
-    "default": ""
   }
 }

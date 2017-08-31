@@ -30,9 +30,5 @@
   {
     "ParameterKey": "DatabaseName",
     "ParameterValue": "${DATABASE_NAME}"
-  },
-  {
-    "ParameterKey": "Domain",
-    "ParameterValue": "${DOMAIN}"
   }
 ]

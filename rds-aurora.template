@@ -34,9 +34,6 @@
     "MasterUsername": {
       "Description": "Master database username",
       "Type": "String"
-    },"Domain": {
-      "Description": "Primary domain",
-      "Type": "String"
     },
     "MasterPassword": {
       "Description": "Master database password",
@@ -251,8 +248,24 @@
     "RdsPrimaryDNS" : {
       "Type" : "AWS::Route53::RecordSet",
       "Properties" : {
-        "HostedZoneName" : {"Fn::Sub": "${Domain}."},
-        "Name" :{"Fn::Sub": "${Environment}-${Application}-db.${Domain}"},
+        "HostedZoneName" : {"Fn::Join":
+        [ "",
+          [
+            { "Fn::ImportValue": {"Fn::Sub": "${VPCStack}-PrimaryDomain"} },
+            "."
+          ]
+        ]
+        },
+        "Name" : {"Fn::Join":
+                [ "",
+                  [
+                    {"Fn::Sub": "${Environment}-${Application}-db."},
+                    { "Fn::ImportValue": {"Fn::Sub": "${VPCStack}-PrimaryDomain"} }
+
+                  ]
+                ]
+                }
+        ,
         "Type" : "CNAME",
         "TTL" : "900",
         "ResourceRecords" : [
