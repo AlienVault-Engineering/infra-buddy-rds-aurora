@@ -299,7 +299,15 @@
       "Description": "Aurora RDS Cluster ID"
     },
     "RdsPrimaryDNS": {
-      "Value": {"Fn::Sub": "${Environment}-${Application}-db.${Domain}"},
+      "Value": {"Fn::Join":
+                      [ "",
+                        [
+                          {"Fn::Sub": "${Environment}-${Application}-db."},
+                          { "Fn::ImportValue": {"Fn::Sub": "${VPCStack}-PrimaryDomain"} }
+
+                        ]
+                      ]
+                      },
       "Export" : {
         "Name" : {
           "Fn::Join": [
