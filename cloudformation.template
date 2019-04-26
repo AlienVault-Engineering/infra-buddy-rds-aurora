@@ -373,6 +373,28 @@
         }
       },
       "Description": "Aurora RDS Cluster Port"
+    },
+    "RdsClusterSecurityGroup" : {
+      "Value" :  {
+        "Fn::GetAtt" : [
+          "RdsSecurityGroup",
+          "GroupId"
+        ]
+      },
+      "Export" : {
+        "Name" : {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "StackName"
+              },
+              "-RdsDbCluster-SecurityGroupID"
+            ]
+          ]
+        }
+      },
+      "Description" : "Aurora RDS CLuster Security Group ID"
     }
   }
 }
