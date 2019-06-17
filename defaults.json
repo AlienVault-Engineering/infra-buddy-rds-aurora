@@ -3,15 +3,5 @@
     "type": "property",
     "key": "DB_INSTANCE_TYPE",
     "default": "db.t2.medium"
-  },
-  "DB_ENGINE": {
-    "type": "property",
-    "key": "DB_ENGINE",
-    "default": "aurora"
-  },
-  "DB_ENGINE_VERSION": {
-    "type": "property",
-    "key": "DB_ENGINE_VERSION",
-    "default": ""
   }
 }

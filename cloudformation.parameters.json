@@ -30,13 +30,5 @@
   {
     "ParameterKey": "DatabaseName",
     "ParameterValue": "${DATABASE_NAME}"
-  },
-  {
-    "ParameterKey": "Engine",
-    "ParameterValue": "${DB_ENGINE}"
-  },
-  {
-    "ParameterKey": "EngineVersion",
-    "ParameterValue": "${DB_ENGINE_VERSION}"
   }
 ]
