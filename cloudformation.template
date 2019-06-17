@@ -113,7 +113,12 @@
         "DBClusterIdentifier" : {
           "Ref" : "RdsDbCluster"
         },
-        "Engine": "aurora",
+        "Engine": {
+          "Ref": "Engine",
+        },
+        "EngineVersion": {
+          "Ref": "EngineVersion",
+        },
         "DBSubnetGroupName": {
           "Ref": "RdsDbSubnetGroup"
         },
@@ -155,7 +160,12 @@
         "DBClusterIdentifier" : {
           "Ref" : "RdsDbCluster"
         },
-        "Engine": "aurora",
+        "Engine": {
+          "Ref": "Engine",
+        },
+        "EngineVersion": {
+          "Ref": "EngineVersion",
+        },
         "DBSubnetGroupName": {
           "Ref": "RdsDbSubnetGroup"
         },
