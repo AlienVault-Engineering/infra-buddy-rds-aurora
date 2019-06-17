@@ -12,6 +12,6 @@
   "DB_ENGINE_VERSION": {
     "type": "property",
     "key": "DB_ENGINE_VERSION",
-    "default": "5.6"
+    "default": ""
   }
 }
